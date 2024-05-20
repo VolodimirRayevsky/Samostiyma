@@ -1,0 +1,25 @@
+// Основний клас розумного будинку
+function SmartHouse(name) {
+    this.name = name;
+    this.devices = [];
+}
+
+SmartHouse.prototype.addDevice = function(device) {
+    this.devices.push(device);
+};
+
+SmartHouse.prototype.getDevices = function() {
+    return this.devices;
+};
+
+SmartHouse.prototype.getDeviceByName = function(name) {
+    return this.devices.find(function(device) {
+        return device.name === name;
+    });
+};
+
+SmartHouse.prototype.offAllDevices = function() {
+    this.devices.forEach(function(device) {
+        device.off();
+    });
+};
