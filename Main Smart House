@@ -105,3 +105,4 @@ sh.getDeviceByName("Lamp1").setBrightness(75);
 sh.getDeviceByName("Blinds1").open();
 sh.getDeviceByName("AC1").setTemperature(20);
 sh.offAllDevices();
+
