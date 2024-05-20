@@ -1,0 +1,11 @@
+Device.prototype.updateStatusAsync = function(callback) {
+    setTimeout(() => {
+        this.on();
+        callback();
+    }, 1000);
+};
+
+// Використання асинхронного методу
+sh.getDeviceByName("Lamp1").updateStatusAsync(function() {
+    console.log("Lamp1 status updated asynchronously");
+});
